@@ -23,6 +23,10 @@
 }
 /* Style Homepage */
 .Homepage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url("./Images/background.png")  ;
   width: 100vw;
   height: 90vh;
@@ -30,4 +34,18 @@
   background-size: cover;
   background-position: center;
 
+}
+.Homeheader{
+color: #FFB6B6 ;
+text-align: center;
+font-weight: 700;
+}
+.Order-button{
+  margin:3rem;
+  background-color: #FF0000;
+  color: #FFFFFF;
+   width: 20%;
+   height: 5%;
+   text-align: center;
+  
 }
