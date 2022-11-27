@@ -82,3 +82,35 @@ font-weight: 700;
   font-size: 1.5rem;
   cursor: pointer;
 }
+/* style cart */
+.cart{
+  display: flex;
+  flex-direction: column;
+  background-image: url("./Images/Mycartbackground.png")  ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+
+}
+.Cart_container{
+  background-color: #F4F4F4;
+  width: 30vw;
+  height: 40vh;
+  padding: 2rem;
+}
+.mycart-header{
+  text-align: center;
+
+}
+.next{
+   width: 6rem;
+height:2.25rem;
+background-color: #FF0000;
+color: white;
+font-weight: 600;
+
+}
