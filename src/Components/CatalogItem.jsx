@@ -1,7 +1,7 @@
 function CatalogItem(props){
     return(
         <div>
-            <h3 className="gray-line">{props.name}---------------------{props.price} <button className="btn-plus">+</button></h3>
+            <h3 className="line">{props.name} ------------  {props.price}</h3>
         </div>
     )
 

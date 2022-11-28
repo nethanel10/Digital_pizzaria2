@@ -64,8 +64,7 @@ font-weight: 700;
 
 
 }
-.sec{
-  width:  60vh;
+.flex-section{
   display: flex;
 
 }
@@ -181,6 +180,16 @@ flex-direction: column;
     height: 60vh;
     padding: 3rem;
   }
+  /* .container-section{
+    display: flex;
+    flex-direction: column;
+  } */
+  .flex-section{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
   
   
 }
