@@ -1,9 +1,8 @@
-import Cartcontainer from "../Components/CartContainer"
-
+import Cartmycart from "../Components/Cart__myCart"
 function Mycart(){
     return(
         <div className="cart">
-            <Cartcontainer/>
+            <Cartmycart/>
         </div>
     )
 }
