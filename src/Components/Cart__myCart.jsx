@@ -1,10 +1,14 @@
 function Cartmycart(){
     return(
         <div  className="cartmycart">
-            <h1 className="mycart-header">mycart</h1>
-           <button className="next">next</button>
+            <div className="header">
+                <h1>MyCart</h1>
+            </div>
+            <div className="content">
 
-        </div>
+                <button className="next">next</button>
+            </div>
+            </div>
     )
 }
 export default Cartmycart;
