@@ -1,7 +1,8 @@
 import axios from "axios"
 import {useState,useEffect} from 'react'
+import { useNavigate } from "react-router-dom"
 function Extraselector(){
-
+let navigate=useNavigate()
     const [Pizza,setpizza]=useState()
     const fetchData=async ()=>{
         try{
@@ -22,8 +23,11 @@ console.log(res.data)
     return(
         <div className="container-section-1">
             <div className="Cart_container-1">
-            {Pizza?.filter(i => i.id ==="1").map(item=> <h2>you chose {item.name}</h2>)}
-
+            {Pizza?.filter(i => i.id ==="1").map(item=> <div><h2 className="header-2">you chose {item.name}</h2>  </div>)}
+            {Pizza?.filter(i => i.type ===2).map(item=> <div className="container-checkbox"><input type="checkbox"  className="checkbox"></input  ><h2>{item.name}</h2></div>)}
+<button className="btn-add" onClick={()=>{
+    navigate("/Mycart")
+}}>Add to cart </button>
             </div>
         </div>
      

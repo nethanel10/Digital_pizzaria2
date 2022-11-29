@@ -176,14 +176,30 @@ align-items: flex-end;
 
 }
 .Cart_container-1{
+  
   justify-content: center;
   align-items: center;
   background-color: #F4F4F4;
   width: 20vw;
-  height: 30vh;
+  height: 39vh;
   padding: 2rem;
 
 }
+.container-checkbox{
+  display: flex;
+  text-align: center;
+  
+}
+.btn-add{
+  width: 6rem;
+  height:2.25rem;
+  background-color: #FF0000;
+  color: white;
+  font-weight: 600;
+  align-items: flex-end;
+
+}
+
 /* style Checkout */
 .Checkout_container{
   display: flex;
@@ -307,6 +323,26 @@ flex-direction: column;
   }
    */
 
+   .container-checkbox{
+    font-size: 10px;
+    margin-top: 1rem;
+  }
+  .header-2{
+    font-size: 15px;
+  }
+  .Cart_container-1{
+    width: 25vw;
+  height: 50vh;
+  }
+  .btn-add{
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .checkbox{
+    width: 1rem
+  }
+  
   
   
   
