@@ -1,24 +1,74 @@
-function Cartchechout(){
-    return(
-        <form className="container-details" method="get">
+import React, { useState } from "react";
+import Cards from 'react-credit-cards';
+import 'react-credit-cards/es/styles-compiled.css';
+function Cart_checkout(){
+const[number,Setnumber]=useState('')
+const[name,Setname]=useState('')
+const[expiry,setExpiry]=useState('')
+const [cvc,SetCvc]=useState('')
+const[focus,SetFocus]=useState('')
+return(
+    <div className="Checkout_container">
         <div className="Cart_container">
-            <h2 className="personal-data-header">Checkout</h2>
-        <div className="feilds-input">
-        <input type="text" name="Card-number" id="" placeholder="Card number" />
-        <h6>E.g:49...,51...,36...,37...</h6>
-        <input type="text" name="Name" id="" placeholder="Name" />
-        <div className="flex">
-        <input type="text" name="Vaild Thru" id="" placeholder="Vaild Thru" />
-        <input type="text" name="CvC" id="" placeholder="Vaild Thru" />
+            <h2>Checkout</h2>
+        <div className="Cart_checkout">
+        <Cards
+        number={number}
+        name={name}
+        xpiry={expiry}
+        cvc={cvc}
+        focused={focus}
+
+        />
+<form>
+    <input type='tel'
+     name="number" 
+     placeholder="Card Number" 
+     value={number}
+     onChange={e=>Setnumber(e.target.value)}
+     onFocus={e=>SetFocus(e.target.name)}
+     className="Credit_card_feilds"
+
+      />
+    <input type='text'
+     name="name" 
+     placeholder="Name" 
+     value={name} 
+     onChange={e=>Setname(e.target.value)}
+     onFocus={e=>SetFocus(e.target.name)}
+     className="Credit_card_feilds"
+      />
+    <input type='text'
+     name="expiry" 
+     placeholder="MM/YY Expiry" 
+     value={expiry} 
+     onChange={e=>setExpiry(e.target.value)}
+     onFocus={e=>SetFocus(e.target.name)}
+     className="Credit_card_feilds"
+
+      />
+    <input type='tel'
+     name="cvc" 
+     placeholder="CVC" 
+     value={cvc} 
+     onChange={e=>SetCvc(e.target.value)}
+     onFocus={e=>SetFocus(e.target.name)}
+     className="Credit_card_feilds"
+
+      />
+
+
+
+     </form>
+    </div>
+    <button className="Finish-button">Finish</button>
+
 
         </div>
 
-
-</div>
-</div>
-</form>
-
-        
-    )
+    </div>
+)
 }
-export default Cartchechout
+export default Cart_checkout
+
+

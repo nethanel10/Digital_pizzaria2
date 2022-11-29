@@ -196,11 +196,29 @@ align-items: flex-end;
   align-items: center;
 
 }
-.feilds-input{
+.Cart_checkout{
   background-color: white;
-  padding: 1rem;
 }
+.Credit_card_feilds{
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border:  1px solid #ced4da;
+  transition:border-color .15s ;
+}
+.Finish-button{
+  width: 6rem;
+  height:2.25rem;
+  background-color: #FF0000;
+  color: white;
+  font-weight: 600;
+  align-items: flex-end;
 
+
+}
 @media screen  and (min-width:300px)  and (max-width:500px) {
   input{
     width: 30vw;
@@ -246,6 +264,30 @@ flex-direction: column;
   
   
   }
+  .Credit_card_feilds{
+    /* padding: .375rem .75rem; */
+    font-size: 1rem;
+    /* line-height: 1.5; */
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border:  1px solid #ced4da;
+    transition:border-color .15s ;
+  }
+  .Cart_container{
+    height: 60vh;
+    padding: 3rem;
+  }
+  .Cart_checkout{
+    background-color: white;
+    width: 20vw;
+  }
+  .rccs__card{
+    height: 10rem;
+  }
+  
+
+  
   
   
   

@@ -6,7 +6,7 @@ import Ourcatalog from './Pages/Ourcatalog';
 import Mycart from './Pages/Mycart';
 import CartpersonalDetails from './Components/Cart_personal_details';
 import Extraselector from './Components/ExtrasSelector';
-import Cartchechout from './Components/Cart__checkout';
+import Cart_checkout from './Components/Cart__checkout';
 function App() {
   return (
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
         <Route path='/stores'>store</Route>
         <Route path="/Mycart/personaldetails" element={<CartpersonalDetails/>}></Route>
         <Route path='/catalog/extraselector' element={<Extraselector/>}>Catalog</Route>
-<Route path='/Mycart/checkout' element={<Cartchechout/>}></Route>
+<Route path='/Mycart/checkout' element={<Cart_checkout/>}></Route>
 
       </Routes>
 
