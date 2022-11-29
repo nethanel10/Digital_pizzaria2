@@ -219,6 +219,26 @@ align-items: flex-end;
 
 
 }
+/* Finsh  */
+.finish-container{
+  display: flex;
+  background-image: url("./Images/background.png")  ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 90vh;
+  justify-content: center;
+
+
+}
+.finsh-message{
+  background-color: white;
+  width: 30vw;
+  height: 20vh;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 5%;
+}
 @media screen  and (min-width:300px)  and (max-width:500px) {
   input{
     width: 30vw;

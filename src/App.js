@@ -7,6 +7,7 @@ import Mycart from './Pages/Mycart';
 import CartpersonalDetails from './Components/Cart_personal_details';
 import Extraselector from './Components/ExtrasSelector';
 import Cart_checkout from './Components/Cart__checkout';
+import Finish from './Components/Finish';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Mycart/personaldetails" element={<CartpersonalDetails/>}></Route>
         <Route path='/catalog/extraselector' element={<Extraselector/>}>Catalog</Route>
 <Route path='/Mycart/checkout' element={<Cart_checkout/>}></Route>
+<Route path='/finsh' element={<Finish/>}> </Route>
 
       </Routes>
 

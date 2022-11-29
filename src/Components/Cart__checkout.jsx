@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css';
 function Cart_checkout(){
+    let navigate=useNavigate()
 const[number,Setnumber]=useState('')
 const[name,Setname]=useState('')
 const[expiry,setExpiry]=useState('')
@@ -61,7 +63,9 @@ return(
 
      </form>
     </div>
-    <button className="Finish-button">Finish</button>
+    <button className="Finish-button" onClick={()=>{
+         navigate("/finsh")
+    }}>Finish</button>
 
 
         </div>

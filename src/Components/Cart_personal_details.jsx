@@ -9,7 +9,7 @@ if(event.target.value==="Creditcard"){
 }
 }
     return(
-                    <form className="container-details" method='GET' onSubmit={handelchange} >
+                    <form className="container-details" method='GET' action='/Mycart/checkout' >
                         <div className="Cart_container">
                             <h2 className="personal-data-header">Personal Details</h2>
                         <div className="feilds">
