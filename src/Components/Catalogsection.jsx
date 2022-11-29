@@ -1,7 +1,7 @@
 import CatalogItem from "./CatalogItem"
 import {useState,useEffect} from "react"
 import axios from "axios"
-function Catalogsection(props){
+function Catalogsection(){
     const [Pizza,setpizza]=useState()
     const fetchData=async ()=>{
         try{
@@ -28,7 +28,7 @@ console.log(res.data)
 
         
         </section>
-            <section  >
+            <section className="left-flex"  >
                 <h1>Drinks</h1> 
                  {Pizza?.filter(i => i.type === 3).map(item=> <CatalogItem {...item}/>)}
      

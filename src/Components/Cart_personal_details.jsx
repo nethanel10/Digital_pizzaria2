@@ -2,7 +2,7 @@ function CartpersonalDetails(){
     return(
                     <form className="container-details" method="get">
                         <div className="Cart_container">
-                            <h2 className="personal-data-header">personal details</h2>
+                            <h2 className="personal-data-header">Personal Details</h2>
                         <div className="feilds">
             <div className="details-left">
             <h3>First name</h3>
