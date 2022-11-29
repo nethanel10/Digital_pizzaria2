@@ -1,6 +1,15 @@
+import { useNavigate} from 'react-router-dom'
 function CartpersonalDetails(){
+let navigate=useNavigate()
+    const options = ['Cash','Creditcard'];
+const handelchange=(event)=>{
+if(event.target.value==="Creditcard"){
+    console.log(event.target.value)
+    event.preventDefalt()
+}
+}
     return(
-                    <form className="container-details" method="get">
+                    <form className="container-details" method='GET' onSubmit={handelchange} >
                         <div className="Cart_container">
                             <h2 className="personal-data-header">Personal Details</h2>
                         <div className="feilds">
@@ -18,15 +27,19 @@ function CartpersonalDetails(){
         <h3>Apartment</h3>
         <input type="number" name="Apartment" id="" />
         <h3>payment method</h3>
-         <select name="Paymentmethod">
-        <option value="Cash">Cash</option>
-        <option value="credit card">Credit card</option>
+         <select name="Paymentmethod"  >
+         {options.map((option, index) => {
+						return <option key={index} >
+							{option}
+						</option>
+					})}
 
          </select>
          </div>
 
             </div>
             <input type="submit" value="checkout" className="check-out-button"></input>
+
 
                         </div>
         </form>
