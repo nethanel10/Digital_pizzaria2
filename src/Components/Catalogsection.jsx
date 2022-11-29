@@ -1,6 +1,7 @@
 import CatalogItem from "./CatalogItem"
 import {useState,useEffect} from "react"
 import axios from "axios"
+import Extraselector from "./ExtrasSelector"
 function Catalogsection(){
     const [Pizza,setpizza]=useState()
     const fetchData=async ()=>{
@@ -24,7 +25,8 @@ console.log(res.data)
         <div className="flex-section">
         <section  >
            <h1>Pizza</h1> 
-            {Pizza?.filter(i => i.type === 1).map(item=> <CatalogItem {...item}/>)}
+            {Pizza?.filter(i => i.type === 1).map(item=> <CatalogItem {...item}/> 
+            )}
 
         
         </section>
@@ -39,11 +41,14 @@ console.log(res.data)
 <div>
     <section>
         <h1>Extras</h1>
-        {Pizza?.filter(i => i.type === 2).map(item=> <CatalogItem {...item}/>)}
+        {Pizza?.filter(i => i.type === 2).map(item=> <CatalogItem {...item}  
 
-    </section>
+        /> )}
+</section>
+
 </div>
         </div>
+
      
      
     )

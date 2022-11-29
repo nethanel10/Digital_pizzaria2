@@ -165,15 +165,12 @@ align-items: flex-end;
 /* style extra selector */
 .container-section-1{
   display: flex;
-  background-image: url("./Images/SelectedExtraBackground.png")  ;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100vw;
   height: 90vh;
   justify-content: center;
   align-items: center;
 
-
+ 
 }
 .Cart_container-1{
   
@@ -254,6 +251,20 @@ align-items: flex-end;
   text-align: center;
   margin-top: 1rem;
   border-radius: 5%;
+}
+.Store{
+  background-color: salmon;
+  /* margin-top: 1rem; */
+}
+.container{
+  background-image: url("./Images/background.png")  ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 90vh;
+  justify-content: space-around;
+
+
 }
 @media screen  and (min-width:300px)  and (max-width:500px) {
   input{

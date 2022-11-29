@@ -8,6 +8,7 @@ import CartpersonalDetails from './Components/Cart_personal_details';
 import Extraselector from './Components/ExtrasSelector';
 import Cart_checkout from './Components/Cart__checkout';
 import Finish from './Components/Finish';
+import Stores from './Pages/Stores';
 function App() {
   return (
     <div className="App">
@@ -17,9 +18,9 @@ function App() {
         <Route path='/catalog' element={<Ourcatalog/>}>Catalog</Route>
         <Route path='/Mycart' element={<Mycart/>}>Mycart </Route>
         <Route path='/myorders'>My orders</Route>
-        <Route path='/stores'>store</Route>
+        <Route path='/stores' element={<Stores/>}>store</Route>
         <Route path="/Mycart/personaldetails" element={<CartpersonalDetails/>}></Route>
-        <Route path='/catalog/extraselector' element={<Extraselector/>}>Catalog</Route>
+        <Route path='/catalog/extraselector/:id' element={<Extraselector/>}>Catalog</Route>
 <Route path='/Mycart/checkout' element={<Cart_checkout/>}></Route>
 <Route path='/finsh' element={<Finish/>}> </Route>
 
