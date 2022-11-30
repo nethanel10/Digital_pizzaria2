@@ -22,6 +22,7 @@ function App() {
         <Route path='/catalog/extraselector/:id' element={<Extraselector/>}>Catalog</Route>
 <Route path='/Mycart/checkout' element={<Cart_checkout/>}></Route>
 <Route path='/finsh' element={<Finish/>}> </Route>
+<Route path='/Mycart/checkout?' element={<Cart_checkout/>}></Route>
 
       </Routes>
 
