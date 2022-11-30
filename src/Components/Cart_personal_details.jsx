@@ -1,13 +1,14 @@
+
 function CartpersonalDetails(){
     const options = ['Cash','Creditcard'];
     return(
-                    <form className="container-details" method='GET' action='/Mycart/checkout' >
+                    <form className="container-details"  action='/Mycart/checkout' method="GET" >
                         <div className="Cart_container">
                             <h2 className="personal-data-header">Personal Details</h2>
                         <div className="feilds">
             <div className="details-left">
             <h3>First name</h3>
-        <input type="text" name="Firstname" id="" />
+        <input type="text" name="Firstname" value="name" id="" />
         <h3>last name</h3>
         <input type="text" name="Lastname" id="" />
         <h3>phone</h3>
