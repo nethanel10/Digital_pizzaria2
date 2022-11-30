@@ -1,13 +1,5 @@
-import { useNavigate} from 'react-router-dom'
 function CartpersonalDetails(){
-let navigate=useNavigate()
     const options = ['Cash','Creditcard'];
-const handelchange=(event)=>{
-if(event.target.value==="Creditcard"){
-    console.log(event.target.value)
-    event.preventDefalt()
-}
-}
     return(
                     <form className="container-details" method='GET' action='/Mycart/checkout' >
                         <div className="Cart_container">
