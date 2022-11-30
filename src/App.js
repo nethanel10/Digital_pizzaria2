@@ -17,7 +17,6 @@ function App() {
         <Route  path='/' element={<Homepage/>}>Homepage</Route>
         <Route path='/catalog' element={<Ourcatalog/>}>Catalog</Route>
         <Route path='/Mycart' element={<Mycart/>}>Mycart </Route>
-        <Route path='/myorders'>My orders</Route>
         <Route path='/stores' element={<Stores/>}>store</Route>
         <Route path="/Mycart/personaldetails" element={<CartpersonalDetails/>}></Route>
         <Route path='/catalog/extraselector/:id' element={<Extraselector/>}>Catalog</Route>

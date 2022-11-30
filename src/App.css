@@ -1,9 +1,31 @@
 /* Style Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
 *{
   margin: 0;
+  font-family: 'Rubik', sans-serif;
   padding: 0;
   }
+
+body {
+  background-color: black;
+}
+
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 25rem
+}
+
+.itemContainer__options {
+  display: flex;
+  align-items: center;
+
+}
   .Navbar{
+    font-weight: 700;
+    font-size:x-large;
     width: 100vw;
     height: 10vh;
     display: flex;
@@ -73,6 +95,12 @@ font-weight: 700;
 }
 .Ctalog-header{
   color:#FFB6B6;
+  text-align: center;
+}
+
+.cartActions {
+  display: flex;
+  gap: 1rem;
 }
 .btn-plus{
   background-color: transparent;
@@ -82,16 +110,42 @@ font-weight: 700;
   cursor: pointer;
 }
 .container-section{
+  font-size: large;
+  padding: 2rem;
+}
+
+.Header-section{
+  font-weight:900;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20rem;
+  border-bottom: dotted 2px black;
+  padding: 0.4rem;
+}
+.feld{
+  display: flex;
+  padding: 2rem;
   justify-content: space-between;
+  gap: 11rem;
+  flex-wrap: wrap;
+  
+  align-items: center;
 }
-.left-flex{
-  margin-left: 1rem;
-}
+/* .feld-in-ctalog{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px dashed green;
+  
+} */
 /* style cart */
 .cart{
   display: flex;
   flex-direction: column;
-  background-image: url("./Images/Mycartbackground.png")  ;
+  background-image: url("./Images/background.png")  ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -132,6 +186,13 @@ align-items: flex-end;
   justify-content: center;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 20rem;
+}
 /* style personal details */
 .feilds{
   display: flex;
@@ -144,7 +205,7 @@ align-items: flex-end;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("./Images/Mycartbackground.png")  ;
+  background-image: url("./Images/background.png")  ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -163,7 +224,7 @@ align-items: flex-end;
   
 }
 /* style extra selector */
-.container-section-1{
+/* .container-section-1{
   display: flex;
   width: 100vw;
   height: 90vh;
@@ -180,7 +241,28 @@ align-items: flex-end;
   width: 20vw;
   height: 39vh;
   padding: 2rem;
-
+ */
+/* } */
+.overlay{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.modalcontainer{
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top:40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+  color: black;
 }
 .container-checkbox{
   display: flex;
@@ -200,7 +282,7 @@ align-items: flex-end;
 /* style Checkout */
 .Checkout_container{
   display: flex;
-  background-image: url("./Images/SelectedExtraBackground.png")  ;
+  background-image: url("./Images/background.png")  ;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -267,6 +349,10 @@ align-items: flex-end;
 
 }
 @media screen  and (min-width:300px)  and (max-width:500px) {
+  .feld {
+    gap: 3rem;
+    justify-content: center;
+  }
   input{
     width: 30vw;
   }
@@ -353,10 +439,20 @@ flex-direction: column;
   .checkbox{
     width: 1rem
   }
+  .Navbar{
+    font-size: small;
+  }
+  .Header-section{
+    font-weight:1;
+  }
+  .left-flex{
+    margin-left: 0;
+  }
   
   
   
-  
-  
+  .container-section{
+    font-size:large;
+  }
   
 }

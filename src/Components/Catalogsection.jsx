@@ -2,13 +2,20 @@ import CatalogItem from "./CatalogItem"
 import {useState,useEffect} from "react"
 import axios from "axios"
 import Extraselector from "./ExtrasSelector"
+import { useNavigate } from "react-router-dom"
 function Catalogsection(){
     const [Pizza,setpizza]=useState()
+    const[openmodal,setopenmodal]=useState({
+        isopen:false,
+        selectedId :0,
+        name:"",
+    })
+    console.log(openmodal.selectedId)
+let navigate=useNavigate()
     const fetchData=async ()=>{
         try{
-let res=await axios.get("https://6384d2e23fa7acb14f01c505.mockapi.io/products")
-setpizza(res.data)
-console.log(res.data)
+            let res=await axios.get("https://6384d2e23fa7acb14f01c505.mockapi.io/products")
+            setpizza(res.data)
         }
         catch(err){
             console.log(err)
@@ -20,37 +27,62 @@ console.log(res.data)
     },[])
 
     
+    const addDrinkToCart = (id) => {
+        const oldCart = JSON.parse(localStorage.getItem("products")) ?? []
+        const newCart = JSON.stringify([...oldCart, {
+            id,
+            count: 1,
+            extras: []
+        }])
+        localStorage.setItem("products", newCart)
+    }
     if (Pizza ) return(
         <div className="container-section">
-        <div className="flex-section">
+            <div><h1 className="Ctalog-header">Catalog</h1></div>
+            <div className="feld">
         <section  >
-           <h1>Pizza</h1> 
-            {Pizza?.filter(i => i.type === 1).map(item=> <CatalogItem {...item}/> 
-            )}
-
-        
-        </section>
+           <h1 className="Header-section">PIZZA CTALOG</h1> 
+            
+            {Pizza?.filter(i => i.type === 1).map(item=> 
+            <div className="itemContainer">
+                <h3 className="itemContainer__name">{item.name}</h3>
+                <div className="itemContainer__options">
+                    <h3 className="itemContainer__price">
+                        {item.price}
+                    </h3>
+                    {item.type !== 3 && <button onClick={() => {setopenmodal({isOpen: true, selectedId: item.id})}} className="itemContainer__addToCart">+</button>}
+                </div>
+            </div>)}
+       </section>
             <section className="left-flex"  >
-                <h1>Drinks</h1> 
-                 {Pizza?.filter(i => i.type === 3).map(item=> <CatalogItem {...item}/>)}
-     
-             
-            </section>
-
-        </div>
-<div>
-    <section>
-        <h1>Extras</h1>
-        {Pizza?.filter(i => i.type === 2).map(item=> <CatalogItem {...item}  
-
-        /> )}
+            <h1 className="Header-section">Extras CTALOG</h1>
+        {Pizza?.filter(i => i.type === 2).map(item=><div className="itemContainer">
+                <h3 className="itemContainer__name">{item.name}</h3>
+                <div className="itemContainer__options">
+                    <h3 className="itemContainer__price">
+                        {item.price}
+                    </h3>
+                </div>
+            </div>)}
+        </section>
+    <section className="Right-section">
+    <h1 className="Header-section">DRINKS CTALOG</h1> 
+    {Pizza?.filter(i => i.type === 3).map(item=> <div className="itemContainer">
+                <h3 className="itemContainer__name">{item.name}</h3>
+                <div className="itemContainer__options">
+                    <h3 className="itemContainer__price">
+                        {item.price}
+                    </h3>
+                    <button onClick={() => {addDrinkToCart(item.id)}} className="itemContainer__addToCart">+</button>
+                </div>
+            </div>)}
 </section>
-
-</div>
+<Extraselector open={openmodal } setIsOpen={setopenmodal} onClose={()=>setopenmodal(false)}/>
+        </div>
         </div>
 
      
      
     )
 }
-export default Catalogsection;
+export default Catalogsection

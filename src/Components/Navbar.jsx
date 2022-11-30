@@ -10,7 +10,6 @@ function Navbar(){
             <Link to='/'  className="n1">homepage</Link>
             <Link to='/catalog' className='n1'> Our catalog</Link>
             <Link to='/stores' className='n1'>Stores</Link>
-            <Link className='n1' to='/myorders'>myorders</Link>
             <Link className='n1' to='/Mycart'><img src={shoppingcart} alt=""></img></Link>
 
         </div>
