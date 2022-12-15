@@ -1,6 +1,8 @@
+import CatalogItem from "./CatalogItem"
 import {useState,useEffect} from "react"
 import axios from "axios"
 import Extraselector from "./ExtrasSelector"
+import { useNavigate } from "react-router-dom"
 function Catalogsection(){
     const [Pizza,setpizza]=useState()
     const[openmodal,setopenmodal]=useState({
@@ -9,6 +11,7 @@ function Catalogsection(){
         name:"",
     })
     console.log(openmodal.selectedId)
+let navigate=useNavigate()
     const fetchData=async ()=>{
         try{
             let res=await axios.get("https://6384d2e23fa7acb14f01c505.mockapi.io/products")
@@ -37,7 +40,7 @@ function Catalogsection(){
         <div className="container-section">
             <div><h1 className="Ctalog-header">Catalog</h1></div>
             <div className="feld">
-        <section  >
+        <section>
            <h1 className="Header-section">PIZZA CTALOG</h1> 
             
             {Pizza?.filter(i => i.type === 1).map(item=> 

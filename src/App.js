@@ -9,6 +9,7 @@ import Extraselector from './Components/ExtrasSelector';
 import Cart_checkout from './Components/Cart__checkout';
 import Finish from './Components/Finish';
 import Stores from './Pages/Stores';
+import MyOrdersPagePagers from './Pages/MyOrders';
 function App() {
   return (
     <div className="App">
@@ -22,7 +23,7 @@ function App() {
         <Route path='/catalog/extraselector/:id' element={<Extraselector/>}>Catalog</Route>
 <Route path='/Mycart/checkout' element={<Cart_checkout/>}></Route>
 <Route path='/finsh' element={<Finish/>}> </Route>
-<Route path='/Mycart/checkout?' element={<Cart_checkout/>}></Route>
+<Route path='/myorders' element={<MyOrdersPagePagers/>}> </Route>
 
       </Routes>
 

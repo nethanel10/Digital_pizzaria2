@@ -26,7 +26,6 @@ let navigate=useNavigate()
     useEffect(() => {
         fetchData()
         setCartItems(JSON.parse(localStorage.getItem("products")) ?? [])
-
     }, [])
 
 
